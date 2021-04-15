@@ -1,0 +1,135 @@
+@import './Properties.scss';
+
+body {
+    background-color: rgb(182, 233, 233);
+    color: #275979;
+    font-family: 'Marck Script', cursive;
+}
+.wrapperTitle {
+    margin: 50px auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;  
+}
+.title {
+    margin: 0 auto 17px auto;
+    font-size: 46px;
+}
+.inputTitle {
+    max-width: 349px;
+    width: 100%;
+    height: 32px;
+    margin: 0px auto 17px auto;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Marck Script', cursive;
+    @include shadow;
+    @include border;
+}
+.inputError {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.submitTitle, .submitTitle:focus, .submitTitle:hover {
+    margin: 0px auto;
+    @include button;
+    @include shadow;
+}
+.wrapperTodo {
+    max-width: 1400px;
+    width: 100%;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.todo {
+    width: 100%;
+    max-width: 312px;
+    background-color: rgba(224, 121, 178, 0.8);
+    @include shadow;
+    border: 0.1px solid grey;
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    justify-content: center;
+    transition-duration: 0.5s;
+}
+.wrapperTodo .todo:hover {
+    transition-duration: 0.5s;
+    box-shadow:10px 10px 7px rgba(0,0,0,.7);
+    transform: unset;
+    position: relative;
+    z-index: 10;
+    
+}
+.wrapperTodo > div:nth-child(even) {
+    transform: rotate(4deg);
+    background-color: rgba(255, 255, 0, 0.6);
+}
+.wrapperTodo  > div:nth-child(3n) {
+    transform: rotate(-4deg);
+    background-color: rgba(18, 180, 230, 0.6);
+}
+.wrapperTodo  > div:nth-child(1) {
+    transform: rotate(-4deg);
+}
+.wrapperTodo  > div:nth-child(5n) {
+    transform: rotate(0);
+}
+.wrapperTodoTitle, .wrapperInpTodo {
+    display: flex;
+}
+.todoTitle{
+    margin: 10px auto;
+    width: 90%;
+    text-align: center;
+    display: block;
+}
+.inputTodo {
+    max-width: 250px;
+    width: 100%;
+    margin: 0 auto 10px auto;
+    height: 21px;
+    text-align: center;
+    font-size: 19px;
+    font-family: 'Marck Script', cursive;
+    @include shadow;
+    @include border;
+}
+.submitTodo {
+    margin: 0 auto;
+    @include button;
+    @include shadow;
+}
+.textWrapper {
+    display: flex;
+}
+.textTodo {
+    margin: 0 0 5px 15px;
+    width: 100%;
+    font-size: 23px;
+    font-weight: bold;
+}
+.deleteTodo {
+    font-size: 12px;
+    @include miniButton;
+}
+.chekedTodo {
+    margin-right: 5px;
+    display: block;
+    @include miniButton;
+}
+.addTodo {
+    margin-right: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    display: block;
+    @include miniButton;
+    transform: rotateY(
+        180deg
+    );
+}
