@@ -92,6 +92,7 @@ class NewTodo extends React.Component {
                         <button 
                             className={styles.chekedTodo}
                             onClick={() => this.handleCheked(i)}
+                            style={{display: item.checked ? 'none' : 'block' }}
                         >
                             &#10004;
                         </button>

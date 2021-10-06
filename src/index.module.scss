@@ -1,8 +1,8 @@
 @import './Properties.scss';
 
 body {
-    background-color: rgb(182, 233, 233);
-    color: #275979;
+    background: #eee;
+    color: rgba(0, 0, 0, 0.75);
     font-family: 'Marck Script', cursive;
 }
 .wrapperTitle {
@@ -13,18 +13,21 @@ body {
 }
 .title {
     margin: 0 auto 17px auto;
-    font-size: 46px;
+    font-size: 40px;
 }
 .inputTitle {
     max-width: 349px;
     width: 100%;
     height: 32px;
-    margin: 0px auto 17px auto;
+    margin: 0px auto 20px auto;
     text-align: center;
     font-size: 20px;
     font-family: 'Marck Script', cursive;
     @include shadow;
     @include border;
+}
+.inputTitle:focus-visible {
+    outline-color: transparent;
 }
 .inputError {
     font-size: 20px;
@@ -41,7 +44,7 @@ body {
 .wrapperTodo {
     max-width: 1400px;
     width: 100%;
-    margin: 20px auto;
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -49,18 +52,19 @@ body {
 .todo {
     width: 100%;
     max-width: 312px;
+    min-height: 300px;
     background-color: rgba(224, 121, 178, 0.8);
     @include shadow;
-    border: 0.1px solid grey;
+    border: none;
     display: flex;
     flex-direction: column;
     margin: 20px auto;
-    justify-content: center;
+    justify-content: flex-start;
     transition-duration: 0.5s;
 }
 .wrapperTodo .todo:hover {
     transition-duration: 0.5s;
-    box-shadow:10px 10px 7px rgba(0,0,0,.7);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.3), 0 10px 10px rgba(0,0,0,0.2);
     transform: unset;
     position: relative;
     z-index: 10;
@@ -93,12 +97,15 @@ body {
     max-width: 250px;
     width: 100%;
     margin: 0 auto 10px auto;
-    height: 21px;
+    height: 26px;
     text-align: center;
     font-size: 19px;
     font-family: 'Marck Script', cursive;
     @include shadow;
     @include border;
+}
+.inputTodo:focus-visible {
+    outline-color: transparent;
 }
 .submitTodo {
     margin: 0 auto;
@@ -112,7 +119,6 @@ body {
     margin: 0 0 5px 15px;
     width: 100%;
     font-size: 23px;
-    font-weight: bold;
 }
 .deleteTodo {
     font-size: 12px;

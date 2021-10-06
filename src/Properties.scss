@@ -3,10 +3,10 @@
 }
 @mixin border {
     border-radius: 10px;
-    border: 0.1px solid grey;
+    border: none;
 }
 @mixin button {
-    background-color: #3579a3;
+    background-color: rgba(0, 0, 0, 0.75);
     border: none;
     font-size: 17px;
     font-weight: bold;
@@ -20,7 +20,7 @@
 @mixin miniButton {
     height: 27px;
     cursor: pointer;
-    color: #275979;
+    color: rgba(0, 0, 0, 0.75);
     border: none;
     background-color: rgba(224, 121, 178, -0.2);
     font-weight: bold;

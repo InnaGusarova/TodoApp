@@ -58,7 +58,7 @@ class App extends React.Component {
           />
           <p
             className={styles.inputError}
-            style={{color: this.state.inputError ? 'rgb(206, 23, 23)' : 'rgb(182, 233, 233)'}}
+            style={{display: this.state.inputError ? 'block' : 'none'}}
           >
             Список с таким именем мы уже бережно храним для Вас на стикерах ниже. Выберите новое имя для следующего списка.</p>
           <button 
