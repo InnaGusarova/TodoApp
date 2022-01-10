@@ -65,6 +65,7 @@ class NewTodo extends React.Component {
                     <input 
                         type="text"
                         value={value} 
+                        maxlength="15"
                         placeholder="напомнить мне ..."
                         className={styles.inputTodo}
                         onChange={this.handleChange}

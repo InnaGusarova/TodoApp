@@ -117,6 +117,8 @@ body {
 }
 .textWrapper {
     display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
 }
 .textTodo {
     margin: 0 0 5px 15px;

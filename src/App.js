@@ -51,6 +51,7 @@ class App extends React.Component {
           <input 
             type="text"
             value={value}
+            maxlength="15"
             placeholder="Имя списка"
             className={styles.inputTitle}
             onChange={this.handleChange}
